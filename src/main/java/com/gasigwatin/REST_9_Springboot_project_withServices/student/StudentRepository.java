@@ -1,4 +1,4 @@
-package com.gasigwatin.REST_9_Springboot_project_withServices;
+package com.gasigwatin.REST_9_Springboot_project_withServices.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

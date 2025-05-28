@@ -1,5 +1,6 @@
-package com.gasigwatin.REST_9_Springboot_project_withServices;
+package com.gasigwatin.REST_9_Springboot_project_withServices.studentprofile;
 
+import com.gasigwatin.REST_9_Springboot_project_withServices.student.Student;
 import jakarta.persistence.*;
 
 @Entity

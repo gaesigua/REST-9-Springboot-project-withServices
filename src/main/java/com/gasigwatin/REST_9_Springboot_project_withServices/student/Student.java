@@ -1,6 +1,8 @@
-package com.gasigwatin.REST_9_Springboot_project_withServices;
+package com.gasigwatin.REST_9_Springboot_project_withServices.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.gasigwatin.REST_9_Springboot_project_withServices.school.School;
+import com.gasigwatin.REST_9_Springboot_project_withServices.studentprofile.StudentProfile;
 import jakarta.persistence.*;
 
 @Entity
@@ -137,8 +139,5 @@ public class Student {
         public School getSchool() {
             return school;
         }
-
-    }
-
 
 }

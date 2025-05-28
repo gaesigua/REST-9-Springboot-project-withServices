@@ -1,5 +1,6 @@
-package com.gasigwatin.REST_9_Springboot_project_withServices;
+package com.gasigwatin.REST_9_Springboot_project_withServices.student;
 
+import com.gasigwatin.REST_9_Springboot_project_withServices.school.School;
 import org.springframework.stereotype.Service;
 
 @Service
