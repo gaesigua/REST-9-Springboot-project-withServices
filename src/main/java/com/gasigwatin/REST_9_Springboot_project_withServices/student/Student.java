@@ -28,8 +28,8 @@ public class Student {
         @Column(name = "Creation Date", updatable = false)
         private String creationDate;
 
-        @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
-        private StudentProfile studentProfile;
+//        @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+//        private StudentProfile studentProfile;
 
         @ManyToOne
         @JoinColumn(name = "school_id")
@@ -42,14 +42,12 @@ public class Student {
 
 //    A Class Constructor
 
-        public Student(String firstName, String lastName, String email, int age, String creationDate, StudentProfile studentProfile, School school){
+        public Student(String firstName, String lastName, String email, int age, String creationDate){
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
             this.age = age;
             this.creationDate = creationDate;
-            this.studentProfile = studentProfile;
-            this.school = school;
         }
 
 //    Setter and Getter for Id
@@ -118,16 +116,6 @@ public class Student {
             return creationDate;
         }
 
-//    Setter and Getter for studentProfile
-
-
-        public void setStudentProfile(StudentProfile studentProfile) {
-            this.studentProfile = studentProfile;
-        }
-
-        public StudentProfile getStudentProfile() {
-            return studentProfile;
-        }
 
 //    Setter and Getter for School
 

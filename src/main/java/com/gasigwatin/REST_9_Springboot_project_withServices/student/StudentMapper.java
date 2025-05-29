@@ -9,13 +9,20 @@ public class StudentMapper {
     //LET'S CREATE A METHOD THAT WILL ALLOW US TO ENTER ENTRIES, WITHOUT NEEDING TO USE ALL THE FIELDS.
 
     public Student toStudent(StudentDto dto) {
+        if (dto == null){
+            throw new NullPointerException("The Student Dto should not be Null!");
+        }
+
         var student = new Student();
+
         student.setFirstName(dto.firstName());
         student.setLastName(dto.lastName());
         student.setEmail(dto.email());
+        student.setCreationDate(dto.creationDate());
         student.setAge(dto.age());
 
         var school = new School();
+
         school.setId(dto.schoolId());
 
         //Now we need to set the object of type schoolId (the last parameter in the StudentDto record), and then link it to the student object
