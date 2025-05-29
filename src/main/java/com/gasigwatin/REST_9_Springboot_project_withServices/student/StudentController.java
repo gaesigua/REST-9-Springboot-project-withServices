@@ -70,14 +70,14 @@ public class StudentController {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
 
-        var errors = new HashMap<String, String>();
+        var errors = new HashMap<>();
 
-        exception.getBindingResult().getAllErrors().forEach(error -> {
+        exception.getBindingResult().getAllErrors().forEach( error-> {
             var fieldName = ((FieldError)error).getField();
             var errorMessage = error.getDefaultMessage();
             errors.put(fieldName, errorMessage);
         });
 
-        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+    return new ResponseEntity<>(errors,HttpStatus.BAD_REQUEST);
     }
 }
